@@ -425,43 +425,74 @@ tr:hover td {
   background: #e03d00;
 }
 
-/* Mobile-Optimierung */
-@media only screen and (max-width: 768px) {
-  body {
-    font-size: 14px; /* Schrift leicht verkleinern */
+/* Mobile-Optimierungen für Smartphone-Ansicht */
+@media (max-width: 768px) {
+
+  /* Generelle Container-Anpassung */
+  body, .container, .dashboard, .content, .chart-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding-left: 5%;
+      padding-right: 5%;
+      box-sizing: border-box;
+      overflow-x: hidden;
   }
 
-  nav ul {
-    flex-direction: column; /* Navigation untereinander */
-    padding: 0;
-  }
-
-  nav li {
-    margin: 10px 0;
-  }
-
-  .container, .event-box, .player-box, .news-box {
-    width: 90%; /* Boxen etwas kleiner, mittig */
-    margin: 10px auto;
-  }
-
-  .player-box img, .event-box img {
-    width: 80px; /* Bilder skalieren */
-    height: auto;
-  }
-
-  .player-box .info, .event-box .info {
-    display: block;
-    text-align: center;
-    margin-top: 5px;
-  }
-
-  .grid-two-columns {
-    display: block; /* Zwei-Spalten-Layouts untereinander */
-  }
-
+  /* Tabellen responsive machen */
   table {
-    width: 100%;
-    font-size: 12px;
+      display: block;
+      width: 100% !important;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch; /* sanftes Scrollen */
+  }
+
+  table th, table td {
+      padding: 6px 8px;
+      font-size: 0.85rem;
+  }
+
+  /* Charts skalieren */
+  .chart-container {
+      width: 100% !important;
+      overflow-x: auto;
+  }
+
+  .chart-container canvas {
+      width: 100% !important;
+      height: auto !important;
+  }
+
+  /* Spieler-Boxen/Widgets */
+  .player-box, .widget {
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      width: 100% !important;
+      margin-bottom: 15px !important;
+  }
+
+  /* Text innerhalb Boxen anpassen */
+  .player-box img, .widget img {
+      max-width: 80px;
+      margin-bottom: 8px;
+  }
+
+  /* Abstand/Abstände optimieren */
+  .content-section, .dashboard-section {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding: 10px 0 !important;
+  }
+
+  /* Kopfzeilen, Buttons etc. */
+  nav ul li a, .button, .btn {
+      font-size: 0.9rem !important;
+      padding: 6px 10px !important;
+  }
+
+  /* Optional: fix für lange Wörter in Zellen */
+  td, th {
+      word-break: break-word;
   }
 }
