@@ -1,0 +1,267 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: radial-gradient(circle at center, #ffffff 0%, #6d6d6d 100%);
+  color: #f9f9f9;
+  overflow-x: hidden;
+}
+
+/* === Navigation === */
+nav {
+  background-color: #1b1b1b;
+  padding: 12px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s, transform 0.2s;
+}
+nav a:hover {
+  color: #ff4500;
+  transform: scale(1.05);
+}
+nav a.active {
+  color: #ff4500;
+  border-bottom: 2px solid #ff4500;
+}
+
+
+/* === Timer === */
+.lan-timer {
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 700px;
+  text-align: center;
+  background: linear-gradient(180deg, #222 0%, #111 100%);
+  border: 2px solid #ff4500;
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+#countdown {
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: #ff4500;
+}
+
+/* === About === */
+.about {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: center;
+  background: rgba(30,30,30,0.9);
+  border-left: 5px solid #ff4500;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+/* === Info Cards (Events, News, Highlights) === */
+.info-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto 5rem;
+  padding: 0 1rem;
+}
+.info-card {
+  background: #2b2b2b;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255,69,0,0.4);
+}
+.info-card h3 {
+  color: #ff4500;
+  margin-top: 0;
+}
+.info-card p {
+  line-height: 1.5;
+  color: #ddd;
+}
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  background: #ff4500;
+  color: #fff;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #e03d00;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background: #111;
+  color: #999;
+  border-top: 1px solid #333;
+}
+footer p {
+  margin: 0;
+}
+
+/* === Eventübersicht === */
+.events-section {
+  max-width: 1100px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+.events-section h1 {
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+.section-sub {
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  padding: 2rem;
+  gap: 1.5rem;
+}
+.event-card {
+  background: #2b2b2b;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(255, 68, 0, 0.555);
+  filter: brightness(1.1);
+}
+.event-card h3 {
+  color: #ff4500;
+  margin-top: 0;
+}
+.event-date {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* === Archivbereich === */
+.archive-section {
+  background: rgba(20,20,20,0.9);
+  padding: 3rem 1rem;
+  border-top: 2px solid #ff4500;
+  text-align: center;
+}
+.archive-section h2 {
+  color: #ff4500;
+  margin-bottom: 0.5rem;
+}
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 2rem auto 0;
+}
+.archive-card {
+  background: #1f1f1f;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+  transition: transform 0.2s, box-shadow 0.3s, filter 0.3s;
+}
+.archive-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(255,100,0,0.6);
+  filter: brightness(1.1);
+}
+.archive-card h4 {
+  color: #ff4500;
+  margin-top: 0;
+}
+.btn.small {
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* === Spielerübersicht === */
+.spieler-section {
+  color: #000000;
+  max-width: 1100px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+.spieler-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.spieler-card {
+  background: #1f1f1f;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.spieler-card:hover {
+  box-shadow: 0 0 30px rgba(255,100,0,0.6);
+  transform: translateY(-4px);
+}
+.spieler-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  gap: 1rem;
+}
+.spieler-header img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ff4500;
+}
+.spieler-header h3 {
+  color: #ff4500;
+  margin: 0;
+  font-size: 1.4rem;
+  text-align: left;
+}
+.spieler-info {
+  background: #2a2a2a;
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  text-align: left;
+}
+.spieler-card.active .spieler-info {
+  max-height: 300px;
+  padding: 1rem 1.5rem;
+}
+.spieler-info p {
+  margin: 0.4rem 0;
+  color: #ddd;
+  font-size: 0.95rem;
+}
