@@ -34,6 +34,7 @@ nav a.active {
   border-bottom: 2px solid #ff4500;
 }
 
+/* === Hero-Bereich === */
 .hero {
   position: relative;
   background-size: cover;
@@ -44,6 +45,7 @@ nav a.active {
   overflow: hidden;
 }
 
+/* === Seitenüberschriften === */
 h1 {
   text-align: center;
   margin-top: 30px;
@@ -58,6 +60,7 @@ h2 {
   color: #000000;
 }
 
+/* === Dashboard-Bereich oben === */
 .dashboard {
   position: absolute;
   left: -9999px;
@@ -66,8 +69,8 @@ h2 {
   border: 2px solid #000000;
   padding: 20px;
   border-radius: 12px;
-  background: #cccccc;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: #cccccc; /* leichtes Blau als Highlight */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Schatten für Tiefe */
 }
 
 .dashboard h2 {
@@ -76,6 +79,7 @@ h2 {
   color: #222;
 }
 
+/* Tabellen im Dashboard */
 .dashboard table {
   width: 100%;
   border-collapse: collapse;
@@ -122,6 +126,7 @@ h2 {
   font-weight: bold;
 }
 
+/* === Event-Tabellen (Kampagnen) === */
 table {
   border-collapse: collapse;
   width: 90%;
@@ -133,7 +138,7 @@ table {
 }
 
 th {
-  background: rgb(54, 54, 54);
+  background: rgb(54, 54, 54); /* Kopfzeile hebt sich ab */
   color: rgb(255, 255, 255);
   font-weight: bold;
   padding: 12px;
@@ -145,6 +150,7 @@ td {
   text-align: center;
 }
 
+/* Eingabefelder für Punkte */
 input[type="number"] {
   width: 70px;
   padding: 5px;
@@ -160,25 +166,27 @@ input[type="number"]:focus {
   box-shadow: 0 0 5px rgba(70, 0, 0, 0.507);
 }
 
+/* Summen & Highlights */
 .highlight {
   font-weight: bold;
   color: darkred;
 }
 
+/* Tabellenzeilen-Highlight bei Hover */
 tr:hover td {
   background-color: #440000;
   color: rgb(255, 255, 255);
 }
 
 .campaign {
-  table-layout: fixed;
-  width: 85%;
+  table-layout: fixed;   /* feste Breiten */
+  width: 85%;           /* alle gleich breit */
 }
 
 .campaign th, 
 .campaign td {
   border: 1px solid #c4c4c4;
-  width: 16.6%;
+  width: 16.6%;          /* 6 Spalten → 100% / 6 */
   text-align: center;
 }
 
@@ -275,7 +283,7 @@ tr:hover td {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  gap: 40px;
+  gap: 40px;        /* Abstand zwischen den drei Blöcken */
   margin: 30px 0;
 }
 
@@ -286,7 +294,7 @@ tr:hover td {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
+  width: 80px;      /* enger als vorher */
 }
 
   .team.right .player {
@@ -305,8 +313,8 @@ tr:hover td {
 }
 
 .team {
-  position: relative;
-  overflow: hidden;
+  position: relative;           /* wichtig, damit das Pseudo-Element sich daran orientiert */
+  overflow: hidden;             /* verhindert, dass das Bild raussteht */
 }
 
 .team.left::before {
@@ -320,15 +328,15 @@ tr:hover td {
 .team::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background-image: url("../bilder/wolves-logo.png");
-  background-size: contain;
+  inset: 0;                     /* statt top/left/right/bottom je 0 */
+  background-image: url("../bilder/wolves-logo.png"); /* anpassen */
+  background-size: contain;     /* oder cover, je nach Effekt */
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.08;
-  pointer-events: none;
+  opacity: 0.08;                /* Transparenz anpassen */
+  pointer-events: none;         /* verhindert dass Klicks blockiert werden */
 }
-
+/* Hero / Titelbild */
 .hero {
   position: relative;
   background: url("titelbild.jpg") no-repeat center center;
@@ -343,7 +351,7 @@ tr:hover td {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.5); /* Wasserzeichen-Effekt */
 }
 
 .hero-overlay {
@@ -354,6 +362,7 @@ tr:hover td {
   z-index: 1;
 }
 
+/* Timer-Box */
 .lan-timer {
   margin: 2rem auto;
   padding: 2rem;
@@ -369,6 +378,7 @@ tr:hover td {
   margin-top: 1rem;
 }
 
+/* About */
 .about {
   max-width: 800px;
   margin: 2rem auto;
@@ -376,6 +386,7 @@ tr:hover td {
   text-align: center;
 }
 
+/* Info-Container */
 .info-sections {
   display: flex;
   flex-direction: column;
@@ -414,8 +425,10 @@ tr:hover td {
   background: #e03d00;
 }
 
+/* Mobile-Optimierungen für Smartphone-Ansicht */
 @media (max-width: 768px) {
 
+  /* Generelle Container-Anpassung */
   body, .container, .dashboard, .content, .chart-container {
       width: 100% !important;
       max-width: 100% !important;
@@ -425,12 +438,13 @@ tr:hover td {
       overflow-x: hidden;
   }
 
+  /* Tabellen responsive machen */
   table {
       display: block;
       width: 100% !important;
       overflow-x: auto;
       white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
+      -webkit-overflow-scrolling: touch; /* sanftes Scrollen */
   }
 
   table th, table td {
@@ -438,6 +452,7 @@ tr:hover td {
       font-size: 0.85rem;
   }
 
+  /* Charts skalieren */
   .chart-container {
       width: 100% !important;
       overflow-x: auto;
@@ -448,6 +463,7 @@ tr:hover td {
       height: auto !important;
   }
 
+  /* Spieler-Boxen/Widgets */
   .player-box, .widget {
       flex-direction: column !important;
       align-items: center !important;
@@ -456,22 +472,26 @@ tr:hover td {
       margin-bottom: 15px !important;
   }
 
+  /* Text innerhalb Boxen anpassen */
   .player-box img, .widget img {
       max-width: 80px;
       margin-bottom: 8px;
   }
 
+  /* Abstand/Abstände optimieren */
   .content-section, .dashboard-section {
       margin-left: 0 !important;
       margin-right: 0 !important;
       padding: 10px 0 !important;
   }
 
+  /* Kopfzeilen, Buttons etc. */
   nav ul li a, .button, .btn {
       font-size: 0.9rem !important;
       padding: 6px 10px !important;
   }
 
+  /* Optional: fix für lange Wörter in Zellen */
   td, th {
       word-break: break-word;
   }
