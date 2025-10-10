@@ -41,7 +41,7 @@ window.updateAll = function () {
   });
 
   function fmt(num) {
-  return num.toLocaleString('de-DE'); // 10000 → "10.000"
+  return num.toLocaleString('de-DE');
 }
 
   document.getElementById("dashWolvesPts").textContent = fmt(wolvesGrand);
@@ -62,14 +62,13 @@ window.updateAll = function () {
 const diff = wolvesGrand - sharksGrand;
   document.getElementById("kpi-diff").textContent =
   diff === 0 ? "Unentschieden" :
-  diff > 0 ? `Die Wolves führen um ${fmt(diff)} Punkte` : `Die Sharks führen um +${fmt(Math.abs(diff))} Punkte`;
+  diff > 0 ? `Wolves mit ${fmt(diff)} Punkten in Führung` : `Sharks mit +${fmt(Math.abs(diff))} Punkten in Führung.`;
 
   const leaderInfo = document.getElementById("leaderInfo");
-  if (wolvesGrand > sharksGrand) leaderInfo.textContent = `Wolves führen um ${wolvesGrand - sharksGrand}.`;
-  else if (sharksGrand > wolvesGrand) leaderInfo.textContent = `Sharks führen um ${sharksGrand - wolvesGrand}.`;
+  if (wolvesGrand > sharksGrand) leaderInfo.textContent = `Wolves mit ${wolvesGrand - sharksGrand} Punkten in Führung.`;
+  else if (sharksGrand > wolvesGrand) leaderInfo.textContent = `Sharks mit ${sharksGrand - wolvesGrand} Punkten in Führung.`;
   else leaderInfo.textContent = "Unentschieden!";
 
-  // Übergabe an Charts
   window.updateCampaignChart(wolvesCamp, sharksCamp);
   window.updateChapterChart(wolvesKap, sharksKap);
   window.updatePointsChart(wolvesGrand, sharksGrand);
