@@ -85,7 +85,6 @@ async function loadScores() {
       }
     });
 
-    // nach der vollständigen Aktualisierung die lokale Update-Logik anstoßen
     if (typeof updateAll === 'function') {
       updateAll();
     } else {
