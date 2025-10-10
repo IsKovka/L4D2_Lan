@@ -424,3 +424,44 @@ tr:hover td {
 .btn:hover {
   background: #e03d00;
 }
+
+/* Mobile-Optimierung */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px; /* Schrift leicht verkleinern */
+  }
+
+  nav ul {
+    flex-direction: column; /* Navigation untereinander */
+    padding: 0;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  .container, .event-box, .player-box, .news-box {
+    width: 90%; /* Boxen etwas kleiner, mittig */
+    margin: 10px auto;
+  }
+
+  .player-box img, .event-box img {
+    width: 80px; /* Bilder skalieren */
+    height: auto;
+  }
+
+  .player-box .info, .event-box .info {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .grid-two-columns {
+    display: block; /* Zwei-Spalten-Layouts untereinander */
+  }
+
+  table {
+    width: 100%;
+    font-size: 12px;
+  }
+}
