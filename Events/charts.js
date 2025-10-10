@@ -28,7 +28,6 @@ window.updateCampaignChart = function (wolvesCamp, sharksCamp) {
   }
 };
 
-// === Kapitel-Diagramm ===
 window.updateChapterChart = function (wolvesKap, sharksKap) {
   const ctx = document.getElementById('kapitelChart').getContext('2d');
 
