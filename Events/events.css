@@ -182,18 +182,6 @@ tr:hover td {
   text-align: center;
 }
 
-.campaign th:first-child,
-.campaign td:first-child {
-  min-width: 180px;
-  word-wrap: break-word;
-
-  @media (max-width: 600px) {
-  .campaign th:first-child,
-  .campaign td:first-child {
-    min-width: 120px;
-  }
-}
-
 .versus {
   display: flex;
   align-items: flex-start;
@@ -282,7 +270,7 @@ tr:hover td {
   text-align: right;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .versus {
   display: flex;
   align-items: flex-start;
