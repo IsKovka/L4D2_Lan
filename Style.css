@@ -6,7 +6,6 @@ body {
   overflow-x: hidden;
 }
 
-/* === Navigation === */
 nav {
   background-color: #1b1b1b;
   padding: 12px 0;
@@ -37,7 +36,6 @@ nav a.active {
 }
 
 
-/* === Timer === */
 .lan-timer {
   margin: 2rem auto;
   padding: 2rem;
@@ -54,7 +52,6 @@ nav a.active {
   color: #ff4500;
 }
 
-/* === About === */
 .about {
   max-width: 900px;
   margin: 3rem auto;
@@ -66,7 +63,6 @@ nav a.active {
   box-shadow: 0 0 20px rgba(0,0,0,0.6);
 }
 
-/* === Info Cards (Events, News, Highlights) === */
 .info-sections {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -110,7 +106,6 @@ nav a.active {
   background: #e03d00;
 }
 
-/* === Footer === */
 footer {
   text-align: center;
   padding: 1.5rem 0;
@@ -122,7 +117,6 @@ footer p {
   margin: 0;
 }
 
-/* === Eventübersicht === */
 .events-section {
   max-width: 1100px;
   margin: 4rem auto;
@@ -164,7 +158,6 @@ footer p {
   font-size: 0.9rem;
 }
 
-/* === Archivbereich === */
 .archive-section {
   background: rgba(20,20,20,0.9);
   padding: 3rem 1rem;
@@ -203,7 +196,6 @@ footer p {
   font-size: 0.9rem;
 }
 
-/* === Spielerübersicht === */
 .spieler-section {
   color: #000000;
   max-width: 1100px;
