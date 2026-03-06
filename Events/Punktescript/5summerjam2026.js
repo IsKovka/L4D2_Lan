@@ -1,4 +1,4 @@
-const SHEET_CSV_URL = "";
+const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSx1uPezcvcK8IXdFYG4En2SQHG3Ow5q9e0nEiMYfzCvecT3W11Cjg8k0wemJM3gOnoSvxzr3_EUl6p/pub?output=csv";
 
 function normKey(s){
   return (s||'').toString().normalize('NFKD').replace(/\s+/g,' ').trim().toLowerCase();
